@@ -1,0 +1,61 @@
+body {
+  background-color: #BDBEA9;
+  margin: 0;
+  padding: 3%;
+}
+
+#nome {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+#foto {
+  height: 230px;
+  float: left;
+  border-radius: 13%;
+  padding: 10px;
+  background-color: #036b52;
+}
+
+#sobre {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#nacionalidade {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#morando {
+  font-weight: bold;
+}
+
+ul li:nth-of-type(odd) {
+  color: #036b52;
+}
+
+.li1 {
+  font-size: 20px;
+}
+
+.li2 {
+  font-size: 16px;
+}
+
+#foto-container {
+  width: 300px;
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+#sobre-container {
+  float: right;
+  position: absolute;
+  top: 30%;
+  right: 30%;
+}
+
+div {
+  position: relative;
+}
