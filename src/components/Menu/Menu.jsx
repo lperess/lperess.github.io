@@ -4,13 +4,20 @@ import PersonIcon from "@mui/icons-material/Person";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ShortcutIcon from "@mui/icons-material/Shortcut";
+import HubIcon from "@mui/icons-material/Hub";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 
 export default function Menu() {
-  const [selectedSection, setSelectedSection] = useState("home");
+  const navigate = useNavigate();
+  const [selectedSection] = useState(location.pathname);
 
-  const onClick = (section) => setSelectedSection(section);
+  const onClick = (section) => {
+    if (section === "home" || section === "connect") {
+      navigate(`/${section}`);
+    }
+  };
 
   return (
     <div className="menu">
@@ -31,7 +38,7 @@ export default function Menu() {
           type="button"
           onClick={() => onClick("home")}
           className={`nav-btn ${
-            selectedSection === "home" ? "selected-section" : "not-selected"
+            selectedSection === "/home" ? "selected-section" : "not-selected"
           }`}
         >
           <HomeIcon />
@@ -56,6 +63,16 @@ export default function Menu() {
         >
           <SportsEsportsIcon />
           Gamificação
+        </button>
+        <button
+          type="button"
+          onClick={() => onClick("connect")}
+          className={`nav-btn ${
+            selectedSection === "/connect" ? "selected-section" : "not-selected"
+          }`}
+        >
+          <HubIcon />
+          Conexões
         </button>
         <button
           type="button"
