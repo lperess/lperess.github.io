@@ -1,0 +1,96 @@
+.menu {
+  height: 100vh;
+  box-sizing: border-box;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  padding: 24px;
+
+  header {
+    height: 175px;
+    width: 100%;
+
+    .banner {
+      height: 123px;
+      background: url(../../assets/cpbsb.png);
+      background-size: cover;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .game-points {
+      border-radius: 0 0 8px 8px;
+      background-color: rgba(227, 229, 232, 1);
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      gap: 16px;
+
+      .points-bar {
+        width: 192px;
+        height: 6px;
+        background-color: #e9ecef;
+        border-radius: 50px;
+
+        .points {
+          border-radius: 50px;
+          background-color: rgba(0, 145, 255, 1);
+          height: 100%;
+        }
+      }
+
+      .points-counter {
+        color: rgba(161, 163, 165, 1);
+        font-size: 12px;
+        line-height: 100%;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .points-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .nav-btn {
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: "Poppins", sans-serif;
+      cursor: pointer;
+      font-weight: 500;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      line-height: 100%;
+      padding: 8px 16px;
+      background-color: #fff;
+    }
+
+    .not-selected:hover {
+      background-color: #eef7ff;
+    }
+
+    .selected-section {
+      background-color: rgba(0, 145, 255, 1);
+      color: white;
+    }
+  }
+}
